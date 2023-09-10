@@ -24,13 +24,19 @@
     <textarea id = "message" class = "fields" rows="6" cols="32" >   </textarea>
     <div>
         <button id = "clear" class = "input" >Clear</button>
-        <button id = "submit" style="width: 75px;">Submit</button>
+        <button id = "submit" onclick="askUser()" style="width: 75px;">Submit</button>
     </div>
     
 
 
 
 </form>
+<!-- Function to display confirmation -->
+<script>
+    function askUser(){
+        var dummy = confirm("Do you want to proceed with sending the message?")
+    }
+</script>
 <!-- End of Form -->
 </body>
 
