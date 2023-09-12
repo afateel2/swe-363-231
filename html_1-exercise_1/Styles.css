@@ -1,3 +1,18 @@
+
+body{
+    /* background-color: gray; CSS 1 Exercise 1 */
+}
+
+.fLinks{
+    text-decoration: none;
+    color: rgb(130, 130, 130);
+}
+
+.cool{
+    font-family:Helvetica; 
+    font-weight: 550;
+}
+
 .W {
     border-width: 10px;
     border-radius: 10px;

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Styles.css">
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Hire Me</title>
+</head>
+<body>
+    <h1>Proposal Page</h1>
+    <hr>
+    <!-- Select -->
+    <form>
+    <h2>Choose your proposal </h2>
+    <select style="width:200px; height: 25px; font-size: large;">
+      <option>asking a question</option>
+      <option>feedback on the website</option>
+      <option>Drawing request</option>
+    </select>
+  </form>
+    <!-- Status (Radio) -->
+    <form>
+      <h2>Select your status</h2>
+      <input type="radio" name="status" >
+      <strong>Unemployed</strong>
+      <br>
+      <input type="radio" name="status" >
+      <Strong>Employed</Strong>
+      <br>
+      <input type="radio" name="status" >
+      <strong>Entrepreneur</strong>
+      <br>
+      <input type="radio" name="status" >
+      <Strong>Student</Strong>
+      <br>
+      <input type="radio" name="status" >
+      <Strong>Rather not say</Strong>
+    </form>
+    <!-- Number -->
+    <h2>Specify your age</h2>
+    <input type="number" max="100" min="8" required placeholder="age">
+    <!-- Email -->
+    <form>
+      <h2>Provide ways to reach you</h2>
+      <input type="email" name="uContact" id="" placeholder="Email (required)" required>
+      Or
+      <input type="tel" name="uContact" id=""  placeholder="Phone Number">
+      Or
+      <input type="text" name="uContact" id=""  placeholder="Social">
+
+    </form>
+    <!-- Proposal Details -->
+    <form>
+      <h2>Provide more details about your proposal</h2>
+      <textarea name="" id="" cols="45" rows="6" placeholder="Do not be shy and start typing..." style="font-size: large;"></textarea>
+    </form>
+
+    <section>
+      &nbsp;
+      <form action="ThankU.html">
+       <button type="submit">Submit</button>
+      </form>
+    </section>
+    
+</body>
+
+<footer style = "background-color: lightgray; text-align: center;">
+    <hr  style = "border-color: black;">
+    <h2 style = "font-family: Verdana, Geneva, Tahoma, sans-serif;">A2F</h2>
+    <nav>
+       <a class ="fLinks" href = homePage.html>Home Page</a>
+       <br> <br>
+       <a class ="fLinks" href = conUS.html> Contact Me! </a> <!-- HTML 1  EX_2 -->
+       <br> <br>
+       <a class ="fLinks" href = prop.html >Submit a proposal!</a>
+  
+    </nav>
+  <hr style = "border-color: white;">
+  <p  class ="fLinks" style = "padding-bottom: 10px;">&copy; 2023 A2F Dev. All rights reserved.</p>
+    </footer>
+</html>
