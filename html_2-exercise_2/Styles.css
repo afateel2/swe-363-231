@@ -2,6 +2,10 @@
 body{
     /* background-color: gray; CSS 1 Exercise 1 */
 }
+.top{
+    background-color: rgb(131, 24,27);
+    color: rgb(193, 165, 6);
+}
 
 .fLinks{
     text-decoration: none;
@@ -19,6 +23,14 @@ body{
     border-color: rgb(41, 190, 140);
     color: blue;
 }
+.Symbol{
+    color: lightgray;
+    text-shadow: -1px -1px 0px gray,
+    1px -1px 0px grey,
+    -1px 1px 0px grey,
+    1px 1px 0px grey;
+    
+}
 .Brief {
     color: blue;
 
@@ -26,6 +38,10 @@ body{
 
 .fields{
     font-size: large;
+}
+
+a{
+color: green;
 }
 
 .input{

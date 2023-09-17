@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+    color: white;
+}
+.Symbol{
+    color: lightgray;
+    text-shadow: -1px -1px 0px gray,
+    1px -1px 0px grey,
+    -1px 1px 0px grey,
+    1px 1px 0px grey;
+    
+}
+.fLinks{
+    color:gray;
+    text-decoration: none;
+}
+
+.fields{
+    font-size: large;
+}
+.input{
+    width: 75px;
+    margin-top: 7px;
+    margin-left: 55px;
+}
+
+
+a{
+    color: greenyellow;
+}

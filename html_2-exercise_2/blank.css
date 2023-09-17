@@ -1,0 +1,71 @@
+
+/* CSS_2 Exercise_2 */
+
+th{
+    text-transform: uppercase;
+}
+a{
+    color: green;
+
+}
+.top{
+    background-color: #EB5406;
+}
+em{
+    color: blue;
+}
+#the_most_important{
+    background-color: gold;
+    text-transform: capitalize;
+}
+/* CSS_2 Exercise_3 */
+h2{
+    font-family: sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    text-transform: capitalize;
+}
+h2::first-letter{
+    font-size: x-large;
+}
+tr:hover td{
+    background-color: rgb(133, 175, 212);
+}
+nav li{
+    display: inline;
+    padding-left: 20px;
+    
+}
+nav li:first-child a{
+    text-decoration: underline;
+}
+
+tbody tr:nth-child(odd){
+    background-color: rgb(226, 183, 43);
+}
+
+::selection{
+    color: yellow;
+    background-color: green;
+}
+
+a:not(header):hover {
+    /* cursor: pointer; */ 
+    /*    Already not displaying "pointer" for Nav links??!   */
+}
+
+input[type="email"], input[type="text"]{
+height: 20px;
+}
+
+input[type="text"]{
+    border-color: lightgray;
+}
+
+input[name="message"]{
+    height: 50px;
+}
+
+
+
+
