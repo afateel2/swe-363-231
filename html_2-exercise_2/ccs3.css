@@ -195,7 +195,7 @@ footer {
 /* Part 2 */
 .recTop .disap {
     opacity: 0;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in;
 }
 
 .recTop:hover #ham {
@@ -245,18 +245,6 @@ footer {
         
     }
 }
-#content{
-    opacity: 1;
-    /* transition: opacity 5s ease-in-out 1s; */
-}
-#anchor {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    transform: translate(500px, 300px);
-    opacity: 1;
-    transition: opacity 2s ease-out;
-}
 #circle:first-child {
     width: 50px;
     height: 50px;
@@ -273,4 +261,29 @@ footer {
     border-radius: 130px;
     animation: loading 0.8s infinite steps(100);
     animation-delay: 0.4s;
+    
 }
+#anchor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    transform: translate(175px, 300px);
+    animation: hideLoad 2s forwards 2s; 
+    
+}
+#content{
+    opacity: 0;
+    animation: loadPage 2s forwards 4s ;
+}
+@keyframes loadPage{
+    to{
+        opacity:1
+    }
+}
+@keyframes hideLoad {
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
