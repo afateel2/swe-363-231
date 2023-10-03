@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .cell {
+            font-family: sans-serif;
+            font-size: larger;
+            font-weight: bolder;
+            background-color: beige;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cell:hover {
+            background-color: blanchedalmond;
+        }
+
+        .row {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="turn">
+        Now it's is <span>X</span> turn
+    </h1>
+    <!-- Board -->
+    <div class="board">
+        <div class="row">
+            <div id="1" class="cell"></div>
+            <div id ="2" class="cell"></div>
+            <div id ="3" class="cell"></div>
+        </div>
+        <div class="row">
+            <div id ="4" class="cell"></div>
+            <div id ="5" class="cell"></div>
+            <div id ="6" class="cell"></div>
+        </div>
+        <div class="row">
+            <div id ="7" class="cell"></div>
+            <div id ="8" class="cell"></div>
+            <div id ="9" class="cell"></div>
+        </div>
+        
+        <script>
+
+            // decided which turn is it
+            let turn = "X"
+            let gameEnded = false
+            let timerL = 5;
+            let cells = ["","","","","","","","",""]
+            // when we click on a cell add the letter 
+            let board = document.getElementsByClassName("board")[0]
+            board.addEventListener("click", cellClicked)
+
+            function cellClicked(event) {
+                let cell = event.target
+                let indexS = parseInt(cell.id)-1
+                let mainHead = document.querySelector("#turn")
+                if(cells[indexS] == ""){
+                    cell.innerText = turn
+                    cells[indexS] = turn
+                    // Cases for ending a game
+                    gameEnded = gameEnded ? true : (turn === cells[0]) && (cells[0] === cells[1]) && (cells[1] === cells[2])
+                    gameEnded = gameEnded ? true : (turn === cells[3]) && (cells[3] === cells[4]) && (cells[4] === cells[5]) 
+                    gameEnded = gameEnded ? true : (turn === cells[6]) && (cells[6] === cells[7]) && (cells[7] === cells[8]) 
+                    gameEnded = gameEnded ? true : (turn === cells[0]) && (cells[0] === cells[3]) && (cells[3] === cells[6]) 
+                    gameEnded = gameEnded ? true : (turn === cells[1]) && (cells[1] === cells[4]) && (cells[4] === cells[7]) 
+                    gameEnded = gameEnded ? true : (turn === cells[2]) && (cells[2] === cells[5]) && (cells[5] === cells[8]) 
+                    gameEnded = gameEnded ? true : (turn === cells[0]) && (cells[0] === cells[4]) && (cells[4] === cells[8]) 
+                    gameEnded = gameEnded ? true : (turn === cells[2]) && (cells[2] === cells[4]) && (cells[4] === cells[6]) 
+                    // 
+                    if (gameEnded) {
+                        mainHead.innerText = "The winner is "+turn
+                        document.getElementById("afterEnd").style.opacity = 1;
+                        timer()
+                    }
+                    else {
+                    // change if not draw
+                    if(!cells.includes("")){
+                        mainHead.innerText = "Its a draw"
+                        document.getElementById("afterEnd").style.opacity = 1;
+                        timer()
+                    }
+                    else{
+                    // change turn
+                    turn = turn === "X" ? "O" : "X"
+                    //change title
+                    turnLetter = document.querySelector("#turn span")
+                    turnLetter.innerText = turn
+                    }
+                }
+
+                }
+                else{
+                    return
+                }   
+                             
+                
+            }
+            
+            function timer(){
+                document.getElementById("timer").innerText = timerL
+                if(timerL===0){
+                    location.reload()
+                }
+                else{
+                    timerL--
+                    setTimeout(timer,1000)
+                }
+            }
+        </script>
+    </div>
+    <h2 style="opacity:0;" id="afterEnd">Game is restarting in <h2 id="timer"></h2></h2>
+</body>
+
+</html>
