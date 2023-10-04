@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+</head>
+
+<body>
+   <style>
+    body{
+        display: flex;
+        flex-direction: column;
+        background-color: bisque;
+        align-items: center;
+    }
+    .pole{
+        
+        background-color: brown;
+    }
+    .head{
+        border: 5px solid black;
+        width:60px; 
+        height:60px; 
+        border-radius: 50px;
+        opacity: 0;
+    }
+    #ord{
+        margin-top: -1px;
+        display: flex;
+        gap: 19px;
+    }
+    #ord div{
+        background-color: black;
+        height: 120px;
+        width:5px
+    }
+    button{
+        height: 30px;
+        align-self: center;
+        border:1px solid; 
+        border-radius: 12px;
+    }
+    
+   </style>  
+   <!--word field  -->
+   <div id="ord">
+       <h1 id="word"></h1> 
+       <button onclick="guess()">Guess</button>
+       <h2 style="text-decoration: line-through;" id="L_list"></h2>
+    </div>
+   <!-- Hang+man -->
+    
+    <!-- HR Pole -->
+    <div class="pole" style="width:400px; height:10px; border-radius: 3px;"></div>
+    <div class="pole" style="width:10px; height:40px;"></div>
+    <!-- Head -->
+    <div id="1" class="head"></div>
+    <!-- Body -->
+    <div id="ord" style="">
+        <!-- arms -->
+        <div id="3" class="arms" style="rotate: 30deg; height: 100px; opacity: 0;"></div>
+        <div id="2" class="body" style="opacity: 0;"></div>
+        <div id="4" class="arms" style="rotate: -30deg; height: 100px; opacity: 0;"></div>
+    </div>
+    <!-- Legs -->
+    <div id="ord">
+        <div id="5" style="rotate: 10deg; height:135px; opacity: 0;"></div>
+        <div id="6" style="rotate: -10deg; height:135px; opacity: 0;"></div>  
+    </div>
+
+    <div class="pole" style="width:400px; height:10px; border-radius: 3px; margin-top: 30px;"></div>
+
+    <div id="ord">
+        <h1 id="dORa"></h1>
+        <button id ="playAgain" style="opacity: 0;" onclick="location.reload()">Play again</button>
+    </div>
+    <!-- JS -->
+    <script>
+        let word = "rocketeer"
+        let plot = document.getElementById("word")
+        let attempt = 0
+        let crossList =""
+        let L_list = document.getElementById("L_list")
+        let userIn
+        let prompted
+        let slots = "_ ".repeat(word.length)
+        slots[0] = "t"
+        plot.innerText = slots
+        //Button to guess
+        // guess()
+        function guess(){
+            setTimeout(askUser,500)
+            
+        }
+        function askUser(){
+            userIn = window.prompt("Please enter a letter: ")
+            if ((isNaN(userIn)) && (userIn.length===1) ){
+                checkGuess()
+            }
+            else{
+                prompted = "Letters only!"
+                showPrompt()
+                prompted=""
+                setTimeout(showPrompt,1000)
+
+            }
+          
+        }
+        function checkGuess(){
+            indL = word.indexOf(userIn)
+            if(indL !== -1){
+                wordCross()
+            }
+            else{
+                crossList+=" "+userIn
+                L_list.innerText = crossList
+                attempt++
+                updateMan()
+                if(attempt===6){
+                    prompted = "You lost :("
+                    endSeq()
+                }
+            }
+        }
+        function updateMan(){
+            document.getElementById(attempt.toString()).style.opacity=1
+        }
+        function wordCross(){
+            for(i=0;i<word.length;i++){
+                if(word[i]===userIn){
+                    chars = slots.split('');
+                    chars[i*2] = userIn;
+                    slots = chars.join('');
+                    plot.innerText= slots
+                }
+            }
+            if(!slots.includes("_")){
+                prompted = "You won!"
+                endSeq()
+            }
+        }
+        function endSeq(){
+            document.getElementById("playAgain").style.opacity = 1
+            showPrompt()
+        }
+        function showPrompt(){
+            document.getElementById("dORa").innerText= prompted
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+    
+</html>
