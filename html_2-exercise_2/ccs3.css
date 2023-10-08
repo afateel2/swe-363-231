@@ -3,7 +3,10 @@
 
 body {
     background-color: #202020;
-    color: aliceblue;
+    width:900px;
+    height: 3553px;
+    color: white;
+    
 }
 
 /* Nav Bar */
@@ -61,12 +64,14 @@ body {
 #alpha {
     font-size: 50px;
     transform: translate(0, 32px);
+    color: white;
 }
 
 /* End */
 
 /* Intro */
 .largeHeading {
+    color: white;
     width: 366px;
     height: 120px;
     padding-left: 24px;
@@ -159,8 +164,10 @@ body {
 }
 
 .icons {
-    width: 35px;
-    padding-right: 23px;
+    height: 26px;
+}
+.iconBar{
+    display:inline-flex; gap: 32px; width: auto; height:26px; transform:translate(81.5px,48px)
 }
 
 
@@ -285,5 +292,33 @@ footer {
         opacity: 0;
         visibility: hidden;
     }
+}
+.float{
+    padding-top: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* background-color: rgba(50, 50, 50, 0.55); */
+    border-left: 3px solid #292929;
+    width: 75px;
+    height:136px;
+    position: fixed; 
+    left: 425px;
+    z-index: 2;
+    
+}
+.float a{
+    align-self: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+}
+
+.intials{
+    position: absolute;
+    font-size: 36px;
+    left:362px;
+    color: #202020;
+    font-family:cursive;
+    
 }
 
