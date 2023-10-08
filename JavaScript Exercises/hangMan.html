@@ -42,8 +42,23 @@
         border:1px solid; 
         border-radius: 12px;
     }
-    
+    #instruction{
+        position: absolute;
+        padding: 10px;
+        left:20px ;
+        border: 2px solid gray;
+        border-radius: 50px;
+    }
    </style>  
+   <!-- Instructions: JS 2 Exercise 2 -->
+   <div id="instruction">
+    <h2>Instructions:</h2>
+    <h3><em style = "color:brown">Guess </em>==> press any key. (Opens prompt)</h3>
+    <h3><em style = "color:blue">Type letter </em>==> when prompt is open, <br> press the desired letter.</h3>
+    <h3><em style = "color:green">Confirm Guess </em>==> while in prompt press "Enter". </h3>
+    <h3><em style = "color:red">Cancel Guess </em>==> while in prompt press "Esc". </h3>
+
+   </div>
    <!--word field  -->
    <div id="ord">
        <h1 id="word"></h1> 
@@ -78,7 +93,7 @@
     </div>
     <!-- JS -->
     <script>
-        let word = "rocketeer"
+        let word = "bucket"
         let plot = document.getElementById("word")
         let attempt = 0
         let crossList =""
@@ -149,7 +164,10 @@
             document.getElementById("dORa").innerText= prompted
         }
 
-
+        //JS 2 Exercise 2
+        document.addEventListener("keydown", e=>{
+            askUser()
+        })
 
 
 
