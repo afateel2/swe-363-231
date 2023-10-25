@@ -41,6 +41,7 @@
         align-self: center;
         border:1px solid; 
         border-radius: 12px;
+        
     }
     #instruction{
         position: absolute;
@@ -93,7 +94,49 @@
     </div>
     <!-- JS -->
     <script>
-        let word = "bucket"
+        words = [
+            {
+                w:"research"
+            },
+            {
+                w:"build"
+            },
+            {
+                w:"window"
+            },
+            {
+                w:"book"
+            },
+            {
+                w:"library"
+            },
+            {
+                w:"singer"
+            },
+            {
+                w:"easy"
+            },
+            {
+                w:"forward"
+            },
+            {
+                w:"headphone"
+            },
+            {
+                w:"forest"
+            },
+            {
+                w:"jungle"
+            },
+            {
+                w:"happy"
+            },
+            {
+                w:"yellow"
+            },
+            
+        ]
+        let word = words[5].w
         let plot = document.getElementById("word")
         let attempt = 0
         let crossList =""
@@ -168,7 +211,7 @@
         document.addEventListener("keydown", e=>{
             askUser()
         })
-
+        
 
 
 
