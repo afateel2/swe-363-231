@@ -10,7 +10,6 @@ body {
 
 }
 
-/* Nav Bar */
 .recTop {
     display: inline-flex;
     justify-content: center;
@@ -48,9 +47,6 @@ body {
 
 }
 
-/* Nav end */
-
-/* Profile */
 #circleProfile {
     position: absolute;
     background-color: rgb(68, 86, 168);
@@ -68,9 +64,6 @@ body {
     color: white;
 }
 
-/* End */
-
-/* Intro */
 .largeHeading {
     color: white;
     width: 414px;
@@ -81,11 +74,10 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
-    /* 111.111% */
     letter-spacing: -0.5px;
 }
 
-/* Brief */
+
 .brief {
     width: 366px;
     padding-top: 20px;
@@ -97,10 +89,8 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: 26px;
-    /* 144.444% */
 }
 
-/* Email Button */
 .emtext {
     color: #FFF;
     font-family: 'Manrope';
