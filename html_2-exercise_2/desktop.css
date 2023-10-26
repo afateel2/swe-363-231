@@ -187,24 +187,6 @@ body {
     margin-top: 200px;
 }
 
-#projImgs {
-    width: 1404px;
-    display: flex;
-    gap: 10px;
-
-
-
-}
-
-#projImgs img {
-    width: 580px;
-    height: 800px;
-    flex-shrink: 0;
-    border-radius: 4px;
-
-    margin-left: 0px;
-}
-
 #contH {
     /* margin-top: 210px;  */
     width: 1404px;
@@ -478,19 +460,6 @@ footer {
 
 }
 
-#projImgs span {
-
-    color: #d61515;
-    font-family: cursive;
-    position: relative;
-    pointer-events: none;
-    top: 0px;
-    left: 0px;
-    font-size: 36px;
-    font-weight: bold;
-    padding: 5px;
-
-}
 #seleCon{
     display: flex;
     flex-direction: column;
@@ -601,3 +570,60 @@ footer {
     width:1404px;
     height:1000px
 }
+
+.prImg{
+    position: relative;
+    width: 581px;
+    display: flex;
+    flex-direction: column;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+
+}
+#MyProjects{
+    width: 1404px;
+    display: flex;
+}
+.prImg span {
+    
+    color: #d61515;
+    font-family: cursive;
+    position: absolute;
+    pointer-events: none;
+    top: 0px;
+    left: 540px;
+    z-index: 2;
+    font-size: 36px;
+    font-weight: bold;
+    
+}
+#projImgs p{
+    font-family: "Manrope";
+    position: relative;
+    color: white;
+    font-size: large;
+}
+.TitleNDate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 575px;
+
+}
+#projImgs {
+    width: 1404px;
+    display: flex;
+    gap: 10px;
+    padding-left:50px;
+
+}
+
+#projImgs img {
+    width: 580px;
+    height: 800px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-left: 0px;
+}
+

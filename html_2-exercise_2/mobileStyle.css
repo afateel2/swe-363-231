@@ -493,3 +493,42 @@ footer {
     width: 414px;
     height:900px; 
 }
+.prImg{
+
+    width: 366px;
+    display: flex;
+    flex-direction: column;
+    background-color: #2d2d2d;
+    border-radius: 5px;
+
+}
+#MyProjects{
+    width: 414px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    position: relative;
+    
+
+}
+.prImg img{
+    width: 366px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.prImg span{
+    position: absolute;
+    font-size: 36px;
+    left: 350px;
+    color: darkred;
+    font-family: cursive;
+    z-index: 2;
+}
+.prImg div{
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    font-family: 'Manrope';
+}
