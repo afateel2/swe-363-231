@@ -61,7 +61,7 @@ function loadImage() {
 // JS 3 Exercise 1
 imgs = document.querySelectorAll('#fetPics img');
 imgs.forEach(imag => {
-    fetch("https://api.unsplash.com/photos/random?query=space&per_page=8&client_id=D5P-LSTm4K7vmyPVnw-Lmj9SpjiVichInWGM5vY7JQQ")
+    fetch("https://api.unsplash.com/photos/random?query=space&per_page=8&client_id=D5P-LSTm4K7vmyPVnw-Lmj9SpjiVichInWGM5vY7JQQ1") //Delete 1
         .then(response => response.json())
         .then(data => {
 
@@ -82,43 +82,38 @@ class myProjects {
         this.date2 = project.date2;
     }
 }
-function addFigures(projects){
-    divA = document.querySelector('#MyProjects');
-    projects.forEach(project => {
-        const aProject = new myProjects(project);
-        divA.appendChild(createFigure(aProject))
+
+//->JS 4 Exercise 2 Part 1 from the line below changed to function expressions
+let addFigures = function(projects) {
+    let divA = document.querySelector('#MyProjects');
+    projects.forEach(function(project) {
+        let aProject = new myProjects(project);
+        divA.appendChild(createFigure(aProject));
     });
-
-}
-function createFigure(proj){
-
+};
+let createFigure = function(proj) {
     let figureString =
     `
     <div class="prImg">
-
-                    <span>A</span>
-                    <img src=${proj.src1}>
-                    <div class="TitleNDate"><p>[Title: ${proj.title1}</p><p>Date:${proj.date1}]</p></div>
-
-                    </div>
-                
-                    <div class="prImg">
-
-                    <span>A</span>
-                    <img src=${proj.src2}>
-                    <div class="TitleNDate"><p>[Title: ${proj.title2}</p><p>Date:${proj.date2}]</p></div>
-
+        <span>A</span>
+        <img src=${proj.src1}>
+        <div class="TitleNDate"><p>[Title: ${proj.title1}</p><p>Date:${proj.date1}]</p></div>
+    </div>
+    <div class="prImg">
+        <span>A</span>
+        <img src=${proj.src2}>
+        <div class="TitleNDate"><p>[Title: ${proj.title2}</p><p>Date:${proj.date2}]</p></div>
     </div>   
-    `
-    
+    `;
     let fig = document.createElement('figure');
     fig.id = "projImgs";
     fig.innerHTML = figureString;
-    return fig
-    
-}
+    return fig;
+};
+//Till here <-
 
-//-> Part 2
+
+//->JS 4 Exercise 1 Part 2
 projects = [
     {
         src1: "assets/a77c0264-7fcc-423e-87b6-b06aaa6b648f.jpg",
