@@ -70,5 +70,67 @@ imgs.forEach(imag => {
         })
 
 })
+//JS 4 Exercise 1
+//-> Part 1
+class myProjects {
+    constructor(project){
+        this.src1 = project.src1;
+        this.title1 = project.title1;
+        this.date1= project.date1;
+        this.src2 = project.src2;
+        this.title2 = project.title2;
+        this.date2 = project.date2;
+    }
+}
+function addFigures(projects){
+    divA = document.querySelector('#MyProjects');
+    projects.forEach(project => {
+        const aProject = new myProjects(project);
+        divA.appendChild(createFigure(aProject))
+    });
+
+}
+function createFigure(proj){
+
+    let figureString =
+    `
+    <div class="prImg">
+
+                    <span>A</span>
+                    <img src=${proj.src1}>
+                    <div class="TitleNDate"><p>[Title: ${proj.title1}</p><p>Date:${proj.date1}]</p></div>
+
+                    </div>
+                
+                    <div class="prImg">
+
+                    <span>A</span>
+                    <img src=${proj.src2}>
+                    <div class="TitleNDate"><p>[Title: ${proj.title2}</p><p>Date:${proj.date2}]</p></div>
+
+    </div>   
+    `
+    
+    let fig = document.createElement('figure');
+    fig.id = "projImgs";
+    fig.innerHTML = figureString;
+    return fig
+    
+}
+
+//-> Part 2
+projects = [
+    {
+        src1: "assets/a77c0264-7fcc-423e-87b6-b06aaa6b648f.jpg",
+        src2: "assets/hangGame.PNG",
+        title1: "Torno",
+        title2: "Hangman",
+        date1: "2022",
+        date2: "2023"
+    }
+]
+//Populating html
+addFigures(projects);
+
 
 
