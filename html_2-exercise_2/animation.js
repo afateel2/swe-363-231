@@ -106,7 +106,7 @@ const resetTimer = () => {
   container.style.visibility = 'hidden';
 
   clearTimeout(timer);
-  timer = setTimeout(displayScreenSaver, 3000);
+  timer = setTimeout(displayScreenSaver, 60000);
 };
 
 document.addEventListener('mousemove', resetTimer);
