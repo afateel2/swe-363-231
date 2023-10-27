@@ -128,4 +128,12 @@ projects = [
 addFigures(projects);
 
 
+//JS 5 Exercise 2
+import { createApp } from 'vue'
+import work from 'app.vue'
+
+createApp(work).mount('#MyWork')
+
+
+
 
