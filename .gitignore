@@ -290,3 +290,4 @@ node_modules/vue/server-renderer/package.json
 package-lock.json
 package.json
 node_modules/.bin/mime
+node_modules/basic-auth/node_modules/safe-buffer/LICENSE
