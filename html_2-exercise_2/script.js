@@ -114,7 +114,7 @@ let createFigure = function(proj) {
 
 
 //->JS 4 Exercise 1 Part 2
-projects = [
+const projects = [
     {
         src1: "assets/a77c0264-7fcc-423e-87b6-b06aaa6b648f.jpg",
         src2: "assets/hangGame.PNG",
@@ -129,10 +129,10 @@ addFigures(projects);
 
 
 //JS 5 Exercise 2
-import { createApp } from 'vue'
-import work from 'app.vue'
+// import { createApp } from 'vue'
+// import work from 'app.vue'
 
-createApp(work).mount('#MyWork')
+// createApp(work).mount('#MyWork')
 
 
 
