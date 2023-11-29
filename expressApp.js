@@ -3,41 +3,43 @@ const app = express();
 // const morgan = require('morgan')
 const path = require('path')
 const logSubmission = require("./midForm")
+app.use(express.static(path.join(__dirname,"/assets")))
 app.use(express.static(path.join(__dirname,"")))
+
 // app.use(express.urlencoded({ extended: true }));
 // app.use(morgan)
 app.get('/', (request,response) =>{
-    const fileP = path.join(__dirname,"Home.html")
+    const fileP = path.join(__dirname,"views/Home.html")
     response.status(200).sendFile(fileP)
 })
 
 app.get('/home', (request,response) =>{
-    const fileP = path.join(__dirname,"Home.html")
+    const fileP = path.join(__dirname,"views/Home.html")
     response.status(200).sendFile(fileP)
 })
 
 app.get('/home-ar', (request,response) =>{
-    const fileP = path.join(__dirname,"Home-ar.html")
+    const fileP = path.join(__dirname,"views/Home-ar.html")
     response.status(200).sendFile(fileP)
 })
 
 app.get('/proposal', (request,response) =>{
-    const fileP = path.join(__dirname,"prop.html")
+    const fileP = path.join(__dirname,"views/prop.html")
     response.status(200).sendFile(fileP)
 })
 
 app.get('/proposal-ar', (request,response) =>{
-    const fileP = path.join(__dirname,"prop.html")
+    const fileP = path.join(__dirname,"views/prop-ar.html")
     response.status(200).sendFile(fileP)
 })
-app.use(logSubmission)
-app.post('/proposal',logSubmission, (request,response) =>{
+// app.use(logSubmission)
+// app.post('/proposal',logSubmission, (request,response) =>{
     
-})
+// })
 
-app.post('/proposal-ar',logSubmission, (request,response) =>{
+// app.post('/proposal-ar',logSubmission, (request,response) =>{
   
-})
+// })
 
 
   
@@ -48,7 +50,7 @@ app.all('*', (request,response) =>{
 
 
 
-app.listen(3000, () =>{ 
+app.listen(3001, () =>{ 
     console.log(
         "Server is running on port 3000"
     )

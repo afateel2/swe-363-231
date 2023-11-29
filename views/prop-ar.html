@@ -3,9 +3,9 @@
 
 <head>
 
- <!-- CSS_4 Exercise 3 & 4 -->
- <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 769px)">
- <link rel="stylesheet" href="mobileStyle.css" media="screen and (max-width: 768px)">
+  <!-- CSS_4 Exercise 3 & 4 -->
+  <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 769px)">
+  <link rel="stylesheet" href="mobileStyle.css" media="screen and (max-width: 768px)">
 
   <!-- CSS_1 Exercise_1 -->
   <!-- <link rel="stylesheet" href="dark_theme.css">  -->
@@ -18,7 +18,7 @@
   <meta name="author" content="Abdullah">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Hire Me</title>
+  <title>وظفني</title>
 
 </head>
 
@@ -41,17 +41,17 @@
 
     <!-- CSS 4 - Exercise 1 -->
     <nav class="float">
-      <a href="Home.html">Home</a>
-      <a href="mailto:abdullah23fateel@gmail.com">Mail</a>
-      <a href="tel:966570708311">Call Me</a>
-      <a href="prop.html">Hire Me</a>
-      <a href="prop-ar.html">عربي</a>
-    </nav>
+      <a href="/Home-ar">الرئيسية</a>
+      <a href="mailto:abdullah23fateel@gmail.com">البريد</a>
+      <a href="tel:966570708311">إتصل بي</a>
+      <a href="/proposal-ar">وظفني</a>
+      <a href="/proposal">English</a>
+  </nav>
     <!--End-->
 
     <nav class="recTop">
       <!-- CSS_3 - Exercise 3 -->
-      <img id="ham" src="assets/icons8-hamburger-50.png" alt="" class="disap" style="height: 30px; align-self: center;">
+      <img id="ham" src="icons8-hamburger-50.png" alt="" class="disap" style="height: 30px; align-self: center;">
       <!-- Logo -->
       <section id="ee" style="display: inline-flex;">
         <p class="disap" id="Logo1">A</p>
@@ -59,74 +59,74 @@
         <p class="disap" id="Logo2">F</p>
       </section>
       <!-- CSS_3 - Exercise 2 -->
-      <a href="prop-ar.html" style="align-self: center;">
-        <img class="disap" id="langSw" src="assets/icons8-globe-50.png" alt="switch language">
+      <a href="/proposal" style="align-self: center;">
+        <img class="disap" id="langSw" src="icons8-globe-50.png" alt="switch language">
       </a>
 
     </nav>
 
-    <h1 class="largeHeading" id="PropHeading">Proposal Page</h1>
+    <h1 class="largeHeading" id="PropHeading">صفحة العروض</h1>
 
     <!-- Select -->
     <form id="seleCon">
-      <h2 class="prompts">Choose your proposal </h2>
+      <h2 class="prompts">اختر الاقتراح الخاص بك</h2>
       <select id="selector">
-        <option>Asking a question</option>
-        <option>Feedback on the website</option>
-        <option>Drawing request</option>
+        <option>طرح سؤال</option>
+        <option>ردود الفعل على الموقع</option>
+        <option>طلب الرسم</option>
       </select>
     </form>
     <!-- Status (Radio) -->
     <form>
-      <h2 class="prompts">Select your status</h2>
+      <h2 class="prompts">اختر حالتك</h2>
       <section id="radios">
 
         <input type="radio" name="status">
-        <strong>Unemployed</strong>
+        <strong>غير موظف</strong>
         <br>
         <input type="radio" name="status">
-        <Strong>Employed</Strong>
+        <Strong>موظف</Strong>
         <br>
         <input type="radio" name="status">
-        <strong>Employer</strong>
+        <strong>صاحب عمل</strong>
         <br>
         <input type="radio" name="status">
-        <Strong>Student</Strong>
+        <Strong>طالب</Strong>
         <br>
         <input type="radio" name="status">
-        <Strong>Rather not say</Strong>
+        <Strong>أفضل ألا أقول</Strong>
       </section>
     </form>
     <!-- Number -->
-    <h2 class="prompts">Specify your age</h2>
+    <h2 class="prompts">حدد عمرك</h2>
     <div style="width: 414px; display:flex; justify-content: center;">
       <input class="textIn" type="number" max="100" min="8" required placeholder="Age">
     </div>
     <!-- Email -->
     <form>
-      <h2 class="prompts">Provide ways to reach you</h2>
+      <h2 class="prompts">وفر طرق للوصول إليك</h2>
       <div style="width: 414px; display:flex; justify-content: center;">
         <div id="emTel">
-          <input class="textIn" type="email" name="uContact" placeholder="Email (required)" required>
+          <input class="textIn" type="email" name="uContact" placeholder="ايميل (مطلوب)" required>
 
-          <input class="textIn" type="tel" name="uContact" placeholder="Phone Number">
+          <input class="textIn" type="tel" name="uContact" placeholder="رقم الهاتف">
 
-          <input class="textIn" type="text" name="uContact" placeholder="Social">
+          <input class="textIn" type="text" name="uContact" placeholder="تواصل اجتماعي">
         </div>
       </div>
 
     </form>
     <!-- Proposal Details -->
-    <h2 class="prompts">Provide more details about your proposal</h2>
+    <h2 class="prompts">تقديم مزيد من التفاصيل حول الاقتراح الخاص بك</h2>
     <form style="display: flex; justify-content: center; width: 414px;">
-      <textarea class="textIn" name="" cols="45" rows="6" placeholder="Do not be shy and start typing..."></textarea>
+      <textarea class="textIn" name="" cols="45" rows="6" placeholder="لا تخجل وابدأ بالكتابة"></textarea>
     </form>
 
     <form action="">
-      <h2 class="prompts">Signature</h2>
+      <h2 class="prompts">التوقيع</h2>
       <!-- JS 3 - Exercise 2  -->
       <div class="sign" style="display: flex; flex-direction: column; align-items: center;">
-        <input id="signatureClear" type="button" value="Clear" ></input>
+        <input id="signatureClear" type="button" value="مسح" ></input>
         <canvas id="signature">
 
         </canvas>
@@ -135,8 +135,8 @@
 
     <section>
       &nbsp;
-      <form action="ThankU.html" method="post" style="width: 414px; display: flex; justify-content: center;">
-        <button id="propSub" type="submit">Submit</button>
+      <form action="/ThankU" method="post" style="width: 414px; display: flex; justify-content: center;">
+        <button id="propSub" type="submit">سلم</button>
       </form>
     </section>
 
@@ -152,10 +152,9 @@
         </div>
 
         <div id="copyS">
-          <span class="copyW">Designed by </span><span id="abd">Abdullah</span><span class="copyW"> —
-            &copy;Copyright
-            2023</span>
-        </div>
+          <span class="copyW">صُمِّم من قبل </span><span id="abd">عبدالله</span><span class="copyW"> — &copy;حقوق
+              النشر 2023</span>
+      </div>
 
       </div>
 

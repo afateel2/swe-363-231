@@ -1,4 +1,4 @@
-<html lang="en" style="">
+<html lang="en" style="height: 0px;">
 
 <head>
     <!-- HTML 1 EX_5 -->
@@ -8,22 +8,17 @@
     <meta name="author" content="Abdullah">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS_4 Exercise 3 & 4 -->
-    <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 769px)">
-    <link rel="stylesheet" href="mobileStyle.css" media="screen and (max-width: 768px)">
-    <!-- <link rel="stylesheet" href="ccs3.css"> -->
+   <!-- CSS_4 Exercise 3 & 4 -->
+   <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 769px)">
+   <link rel="stylesheet" href="mobileStyle.css" media="screen and (max-width: 768px)">
 
     <title>A2F | Home </title>
-
 </head>
 
 
 
 <body>
-    <!-- JS 3 - Exercise 3  -->
-    <div id="ScreenSaver">
 
-    </div>
 
     <div class="lo" id="anchor">
         <div id="circle"></div>
@@ -31,15 +26,16 @@
     </div>
 
 
+
     <div clsss="lo" id="content">
 
         <!-- CSS 4 - Exercise 1 -->
         <nav class="float">
-            <a href="Home.html">Home</a>
-            <a href="mailto:abdullah23fateel@gmail.com">Mail</a>
-            <a href="tel:966570708311">Call Me</a>
-            <a href="prop.html">Hire Me</a>
-            <a href="Home-ar.html">عربي</a>
+            <a href="/Home-ar">الرئيسية</a>
+            <a href="mailto:abdullah23fateel@gmail.com">البريد</a>
+            <a href="tel:966570708311">إتصل بي</a>
+            <a href="/proposal-ar">وظفني</a>
+            <a href="/Home">English</a>
         </nav>
         <!--End-->
 
@@ -47,7 +43,7 @@
 
         <nav class="recTop">
             <!-- CSS_3 - Exercise 3 -->
-            <img id="ham" src="assets/icons8-hamburger-50.png" alt="" class="disap"
+            <img id="ham" src="icons8-hamburger-50.png" alt="" class="disap"
                 style="height: 30px; align-self: center;">
             <!-- Logo -->
             <section id="ee" style="display: inline-flex;">
@@ -56,8 +52,8 @@
                 <p class="disap" id="Logo2">F</p>
             </section>
             <!-- CSS_3 - Exercise 2 -->
-            <a href="Home-ar.html" style="align-self: center;">
-                <img class="disap" id="langSw" src="assets/icons8-globe-50.png" alt="switch language">
+            <a href="/Home" style="align-self: center;">
+                <img class="disap" id="langSw" src="icons8-globe-50.png" alt="switch language">
             </a>
 
         </nav>
@@ -72,19 +68,19 @@
 
         <article id="introNbrief">
             <!-- Introduction -->
-            <p class="largeHeading" id="bigH">
-                Hi, My name is Abdullah <br> A Computer Science student in KFUPM.
+            <p class="largeHeading">
+                مرحبا, اسمي عبدالله <br> طالب علوم الحاسوب في البترول </p>
             </p>
             <!-- Brief -->
             <p class="brief" id="smallH">
-                A portfolio to help organizations and employers learn a few things about me or even reach me.
+                محفظة لمساعدة المنظمات وأصحاب العمل على تعلم بعض الأشياء عني أو حتى الوصول إلي.
             </p>
         </article>
 
         <form action="mailto:abdullah23fateel@gmail.com">
             <button class=" emBtn" id="firstB">
 
-                <img src="assets/d12c91aa-332d-45de-b4ea-3b65caa76053.png" alt=""
+                <img src="d12c91aa-332d-45de-b4ea-3b65caa76053.png" alt=""
                     style="align-self: center; margin-right: 10px; width: 32px; height: 24px;">
                 <p class="emtext">
                     abdullah23fateel@gmail.com
@@ -95,30 +91,29 @@
 
         <section id="arrow_work">
             <!-- Arrow -->
-            <img src="assets/26d11d76-d5df-4f41-831e-2a20e4a2933f.png" alt="">
+            <img src="26d11d76-d5df-4f41-831e-2a20e4a2933f.png" alt="">
             <!-- Text -->
-            <p id="work">My Work</p>
+            <p id="work">عملي</p>
         </section>
 
-        <div id="MyWork">
-            <figure id="imgWork">
-                <div>
-                    <img src="assets/Ameen(WE).png" alt="" class="images">
-                    <span class="intials">A</span>
-                    <img src="assets/pahoenix.png" alt="" class="images">
-                    <span class="intials">A</span> 
-                </div>
-                <div id="rightImg">
-                    <img src="assets/moodboard.png" alt="" class="images">
-                    <span class="intials">A</span>
-                    <img src="assets/pahenix.png" alt="" class="images">
-                    <span class="intials">A</span>
-                </div>
+        <figure id="imgWork">
+            <!-- images -->
+            <div>
+                <img src="Ameen(WE).png" alt="" class="images">
+                <span class="intials">A</span>
+                <img src="pahoenix.png" alt="" class="images">
+                <span class="intials">A</span> <!-- CSS 4 - Exercise 1 -->
+            </div>
+            <div id="rightImg">
+                <img src="moodboard.png" alt="" class="images">
+                <span class="intials">A</span>
+                <img src="pahenix.png" alt="" class="images">
+                <span class="intials">A</span>
+            </div>
         </figure>
-        </div>
 
         <p class="largeHeading" id="centeredH">
-            My Projects
+            مشاريعي
         </p>
 
         <!-- JS-4 _ Exercise 1 -->
@@ -128,10 +123,12 @@
 
         </div>
 
+       
+
         <!-- Featured Work -->
         <figure id="fetWork">
             <p id="contH" class="largeHeading">
-                Featured Work
+                أعمال بارزة
             </p>
             <div id="fetPics">
                 <!-- Fetch and include here -->
@@ -146,25 +143,24 @@
 
             </div>
         </figure>
-
         <article id="Contact">
             <p id="contH" class="largeHeading">
-                Contact Me
+                تواصل معي
             </p>
 
             <div id="available">
                 <p class="brief">
-                    If you are looking for a programmer or a painting in my art style, I am available for work
+                    إذا كنت تبحث عن مبرمج أو لوحة فنية بأسلوبي الفني فأنا جاهز للعمل
                 </p>
             </div>
 
-            <form action="prop.html" id="formP">
+            <form action="/proposal-ar" id="formP">
                 <button class=" emBtn" type="submit">
 
-                    <img src="assets/26d11d76-d5df-4f41-831e-2a20e4a2933f.png" alt=""
+                    <img src="26d11d76-d5df-4f41-831e-2a20e4a2933f.png" alt=""
                         style="align-self: center; margin-right: 30px; width: 22px; height: 30px; rotate: -135deg;">
                     <p class="emtext">
-                        Go to Proposal Page
+                        الذهاب لصفحة العروض
                     </p>
                     <!-- Email -->
                 </button>
@@ -184,9 +180,8 @@
                 </div>
 
                 <div id="copyS">
-                    <span class="copyW">Designed by </span><span id="abd">Abdullah</span><span class="copyW"> —
-                        &copy;Copyright
-                        2023</span>
+                    <span class="copyW">صُمِّم من قبل </span><span id="abd">عبدالله</span><span class="copyW"> — &copy;حقوق
+                        النشر 2023</span>
                 </div>
 
             </div>
@@ -199,7 +194,6 @@
     <script src="three.min.js"></script>
     <script src="animation.js"></script>
     <script src="script.js"></script>
- 
 </body>
 
 

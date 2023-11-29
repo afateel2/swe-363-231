@@ -1,31 +1,31 @@
 images = [
     {
-        src: "assets/icons8-whatsapp-50.png",
+        src: "icons8-whatsapp-50.png",
         href: "https://wa.me/966570708311"
 
     },
     {
 
-        src: "assets/icons8-linkedin-50.png",
+        src: "icons8-linkedin-50.png",
         href: "https://www.linkedin.com/in/abdullah-alfateel-2755a3294/"
 
     },
     {
 
-        src: "assets/icons8-github-50.png",
+        src: "icons8-github-50.png",
         href: "https://github.com/afateel2"
 
     },
     {
 
 
-        src: "assets/icons8-instagram-50.png",
+        src: "icons8-instagram-50.png",
         href: "https://www.instagram.com/afateel2"
 
     },
     {
 
-        src: "assets/icons8-twitterx-50.png",
+        src: "icons8-twitterx-50.png",
         href: "https://twitter.com/A2F_FL"
 
     },
@@ -116,8 +116,8 @@ let createFigure = function(proj) {
 //->JS 4 Exercise 1 Part 2
 const projects = [
     {
-        src1: "assets/a77c0264-7fcc-423e-87b6-b06aaa6b648f.jpg",
-        src2: "assets/hangGame.PNG",
+        src1: "a77c0264-7fcc-423e-87b6-b06aaa6b648f.jpg",
+        src2: "hangGame.PNG",
         title1: "Torno",
         title2: "Hangman",
         date1: "2022",

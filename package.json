@@ -7,8 +7,8 @@
   }
 
   ,"scripts": {
-    "start": "node html_2-exercise_2/expressApp.js",
-    "jeje": "nodemone html_2-exercise_2/expressApp.js"
+    "start": "node expressApp.js",
+    "mon": "nodemon expressApp.js"
   }
 }
 
